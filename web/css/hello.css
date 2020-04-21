@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+html,
+body {
+    height: 100%;
+    font-family: 'Arvo', serif;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, .3) 0, rgba(22, 22, 22, .7) 75%, #161616 100%), url(../images/bg-hello.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+}
+
+#logo-title-container #logo-title-text {
+    padding-left: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.background-blur {
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #aaa;
+    margin: auto;
+}
+
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
