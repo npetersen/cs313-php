@@ -1,0 +1,25 @@
+* {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#div-1 {
+    background-color: #aaa;
+}
+
+#div-2 {
+    background-color: #ccc;
+}
+
+#div-3 {
+    background-color: #eee;
+}
+
+#div-1, #div-2, #div-3 {
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+#div-1:hover, #div-2:hover, #div-3:hover {
+    font-weight: bold;
+}

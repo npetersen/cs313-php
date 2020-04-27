@@ -1,0 +1,16 @@
+.row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-div {
+    padding: 15px;
+}
+
+.border-3 {
+    border-width: 3px !important;
+}
+
+#div-1:hover, #div-2:hover, #div-3:hover {
+    font-weight: bold;
+}
