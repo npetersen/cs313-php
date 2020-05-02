@@ -1,0 +1,9 @@
+.sidebar .logo {
+    padding: 0;
+    font-size: 4rem !important;
+    margin-bottom: 35px;
+}
+
+a[title="Nate Petersen"] {
+    font-size: 5rem !important;
+}
