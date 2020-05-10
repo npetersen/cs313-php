@@ -178,20 +178,20 @@
           <div class="fix-6-12">
             <h1 class="ae-1">Assignments</h1>
             <div class="ae-2">
-              <p class="hero">Nothing to see here yet.</p>
+              <!-- <p class="hero">Nothing to see here yet.</p> -->
             </div>
-            <!-- <ul class="grid fixedSpaces later equal sourceSans grid-86">
-              <li class="col-6-12 ae-2">
+            <ul class="grid fixedSpaces later equal sourceSans grid-86">
+              <li class="col-12-12 ae-2">
                 <div class="box-86 tint-86">
-                  <h3 class="small uppercase ae-4">Assignment 1</h3>
+                  <h3 class="small uppercase ae-4">Week 3 Prove Assignment</h3>
                   <div class="ae-5"></div>
                   <div class="features-86 equalElement ae-6">
                     
                   </div>
-                  <a href="#" class="button teal wide cropBottom ae-7">See assignment 1</a>
+                  <a href="https://frozen-chamber-34011.herokuapp.com/03/shopping-cart/" class="button teal wide cropBottom ae-7">PHP Shopping Cart</a>
                 </div>
               </li>
-              <li class="col-6-12 ae-3">
+              <!-- <li class="col-6-12 ae-3">
                 <div class="box-86">
                   <h3 class="small uppercase ae-5">Assignment 2</h3>
                   <div class="ae-6"></div>
@@ -200,8 +200,8 @@
                   </div>
                   <a href="#" class="button pink wide cropBottom ae-8">See assignment 2</a>
                 </div>
-              </li>
-            </ul> -->
+              </li> -->
+            </ul>
           </div>
 
         </div>
