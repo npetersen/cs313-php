@@ -1,3 +1,5 @@
+CREATE SCHEMA loanapp;
+
 CREATE TABLE loanapp.applicant (
     id SERIAL NOT NULL PRIMARY KEY,
     account_number INT NOT NULL UNIQUE,
