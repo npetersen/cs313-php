@@ -51,7 +51,7 @@
             if ($_SESSION['loggedIn']) {
                 $loanId = filter_input(INPUT_GET, 'loanId', FILTER_SANITIZE_NUMBER_INT);
                 $loan = getLoan($loanId);
-                $pageContent = getLoanData($loan);
+                $includePage = 'loan.php';
             } else {
                 $message = "Unauthorized action. Please login.";
                 $includePage = 'login.php';

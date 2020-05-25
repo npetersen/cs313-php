@@ -26,8 +26,4 @@
         return $loanList;
     }
 
-    function getLoanData($loan) {
-        var_dump($loan);
-    }
-
 ?>
