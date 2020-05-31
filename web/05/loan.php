@@ -39,8 +39,8 @@
 </div>
 <div class="row mt-4">
     <div class="col text-center">
-        <button type="button" class="btn btn-primary btn-lg">Approve Loan</button>
-        <button type="button" class="btn btn-secondary btn-lg">Deny Loan</button>
-        <button type="button" class="btn btn-secondary btn-lg">Back to Pending Loans List</button>
+        <a href="index.php?action=decisionLoan&status=approved&loanId=<?php echo $loan[0]['id'] ?>" type="button" class="btn btn-primary btn-lg">Approve Loan</a>
+        <a href="index.php?action=decisionLoan&status=denied&loanId=<?php echo $loan[0]['id'] ?>" type="button" class="btn btn-secondary btn-lg">Deny Loan</a>
+        <a href="index.php?action=viewLoanList&status=pending" type="button" class="btn btn-secondary btn-lg">Back to Pending Loans List</a>
     </div>
 </div>

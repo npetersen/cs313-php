@@ -66,6 +66,63 @@
         return $loanData;
     }
 
+    function updateLoan($status, $loanId) {
+        $db = get_db();
+        $sql = 'UPDATE loanapp.loan SET status = :status WHERE id = :loanId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':status', $status, PDO::PARAM_STR);
+        $stmt->bindValue(':loanId', $loanId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsChanged = $stmt->rowCount();
+        $stmt->closeCursor();
+
+        return $rowsChanged;
+    }
+
+    function insertLoan($accountNumber, $firstName, $lastName, $ssn, $grossMonthlyIncome, $email, $phone, $streetAddress, $city, $state, $zip, $loanType, $loanAmount, $rate, $term) {
+        $db = get_db();
+        
+        $sql = "
+            with first_insert as (
+                INSERT INTO loanapp.applicant(account_number, first_name, last_name, ssn, gross_monthly_income, email, phone) 
+                values(:account_number, :first_name, :last_name, :ssn, :gross_monthly_income, :email, :phone) 
+                RETURNING account_number
+             ), 
+             second_insert as (
+               INSERT INTO loanapp.applicant_address (account_number, street_address, city, state, zip)
+               VALUES ( (select account_number from first_insert), :street_address, :city, :state, :zip)
+               RETURNING account_number
+             )
+             INSERT INTO loanapp.loan (loan_type, applicant, rate, amount, term, status)
+             values (:loan_type, (select account_number from first_insert), :rate, :amount, :term, 'pending');
+        ";
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->bindValue(':account_number', $accountNumber, PDO::PARAM_INT);
+        $stmt->bindValue(':first_name', $firstName, PDO::PARAM_STR);
+        $stmt->bindValue(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindValue(':ssn', $ssn, PDO::PARAM_STR);
+        $stmt->bindValue(':gross_monthly_income', $grossMonthlyIncome, PDO::PARAM_INT);
+        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->bindValue(':phone', $phone, PDO::PARAM_STR);
+        $stmt->bindValue(':street_address', $streetAddress, PDO::PARAM_STR);
+        $stmt->bindValue(':city', $city, PDO::PARAM_STR);
+        $stmt->bindValue(':state', $state, PDO::PARAM_STR);
+        $stmt->bindValue(':zip', $zip, PDO::PARAM_STR);
+        $stmt->bindValue(':loan_type', $loanType, PDO::PARAM_INT);
+        $stmt->bindValue(':rate', $rate, PDO::PARAM_INT);
+        $stmt->bindValue(':amount', $loanAmount, PDO::PARAM_INT);
+        $stmt->bindValue(':term', $term, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        $rowsChanged = $stmt->rowCount();
+        $stmt->closeCursor();
+
+        return $rowsChanged;
+    }
+
     // Get user data based on a username
     function getUser($username, $password) {
         $db = get_db();
@@ -78,6 +135,17 @@
         $stmt->closeCursor();
 
         return $userData;
+    }
+
+    function getLoanTypes() {
+        $db = get_db();
+        $sql = 'SELECT id, loan_type FROM loanapp.loan_types';
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $loanTypes = $stmt->fetchAll();
+        $stmt->closeCursor();
+
+        return $loanTypes;
     }
 
 ?>
