@@ -30,8 +30,8 @@
         </div>
         <div class="col">
             <div class="form-group">
-                <label for="grossMonthlyIncome" class="control-label">Gross Monthly Income</label>
-                <input type="text" class="form-control" id="grossMonthlyIncome" name="grossMonthlyIncome" required>
+                <label for="gross_monthly_income" class="control-label">Gross Monthly Income</label>
+                <input type="text" class="form-control" id="gross_monthly_income" name="gross_monthly_income" required>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
         <div class="col">
             <div class="form-group">
                 <label for="email" class="control-label">Email Address</label>
-                <input type="email" class="form-control" id="account_number" name="account_number" placeholder="Email Address" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
             </div>
         </div>
         <div class="col">
@@ -72,8 +72,8 @@
         </div>
         <div class="col">
             <div class="form-group">
-                <label for="state_id" class="control-label">State</label>
-                <select class="form-control" id="state_id">
+                <label for="state" class="control-label">State</label>
+                <select class="form-control" id="state" name="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -141,8 +141,8 @@
     <div class="form-row">
         <div class="col">
             <div class="form-group">
-                <label for="loanType" class="control-label">Loan Type</label>
-                <select class="form-control" id="loanType" name="loanType">
+                <label for="loan_type" class="control-label">Loan Type</label>
+                <select class="form-control" id="loan_type" name="loan_type">
                     <?php foreach($loanTypes as $loanType): ?>
                         <option value="<?= $loanType['id']; ?>"><?= $loanType['loan_type']; ?></option>
                     <?php endforeach; ?>
@@ -152,7 +152,7 @@
         <div class="col">
             <div class="form-group">
                 <label for="amount" class="control-label">Loan Amount</label>
-                <input type="text" class="form-control" id="amount" name="amount" placeholder="Loan Amount">
+                <input type="text" class="form-control" id="amount" name="amount" placeholder="Loan Amount" required>
             </div>
         </div>
         <div class="col">

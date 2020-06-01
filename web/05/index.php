@@ -23,28 +23,29 @@
         break;
 
         case 'submitLoan':
-            $firstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
-            $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
-            $accountNumber = filter_input(INPUT_POST, 'accountNumber', FILTER_SANITIZE_NUMBER_INT);
-            $ssn = $firstName = filter_input(INPUT_POST, 'ssn', FILTER_SANITIZE_STRING);
-            $grossMonthlyIncome = filter_input(INPUT_POST, 'grossMonthlyIncome', FILTER_SANITIZE_NUMBER_INT);
+            var_dump($_POST);
+            $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
+            $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+            $account_number = filter_input(INPUT_POST, 'account_number', FILTER_SANITIZE_NUMBER_INT);
+            $ssn = filter_input(INPUT_POST, 'ssn', FILTER_SANITIZE_STRING);
+            $gross_monthly_income = filter_input(INPUT_POST, 'gross_monthly_income', FILTER_SANITIZE_NUMBER_INT);
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
-            $streetAddress = filter_input(INPUT_POST, 'streetAddress', FILTER_SANITIZE_STRING);
+            $street_address = filter_input(INPUT_POST, 'street_address', FILTER_SANITIZE_STRING);
             $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
             $state = filter_input(INPUT_POST, 'state', FILTER_SANITIZE_STRING);
             $zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
-            $loanType = filter_input(INPUT_POST, 'loanType', FILTER_SANITIZE_NUMBER_INT);
-            $loanAmount = filter_input(INPUT_POST, 'loanAmount', FILTER_SANITIZE_NUMBER_INT);
+            $loan_type = filter_input(INPUT_POST, 'loan_type', FILTER_SANITIZE_NUMBER_INT);
+            $amount = filter_input(INPUT_POST, 'amount', FILTER_SANITIZE_NUMBER_INT);
             $rate = filter_input(INPUT_POST, 'rate', FILTER_SANITIZE_NUMBER_INT);
             $term = filter_input(INPUT_POST, 'term', FILTER_SANITIZE_NUMBER_INT);
 
-            $success = insertLoan($accountNumber, $firstName, $lastName, $ssn, $grossMonthlyIncome, $email, $phone, $accountNumber, $streetAddress, $city, $state, $zip, $loanType, $loanAmount, $rate, $term);
+            $success = insertLoan($account_number, $first_name, $last_name, $ssn, $gross_monthly_income, $email, $phone, $street_address, $city, $state, $zip, $loan_type, $amount, $rate, $term);
 
             if ($success) {
-                $message = "Your " . $loanType . " loan application has been submitted!";
+                $message = "Your " . $loan_type . " loan application has been submitted!";
             } else {
-                $message = "There was a problem submitting your " . $loanType . " loan application.";
+                $message = "There was a problem submitting your " . $loan_type . " loan application.";
             }
 
             $includePage = 'thank-you.php';

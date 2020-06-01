@@ -79,7 +79,7 @@
         return $rowsChanged;
     }
 
-    function insertLoan($accountNumber, $firstName, $lastName, $ssn, $grossMonthlyIncome, $email, $phone, $streetAddress, $city, $state, $zip, $loanType, $loanAmount, $rate, $term) {
+    function insertLoan($account_number, $first_name, $last_name, $ssn, $gross_monthly_income, $email, $phone, $street_address, $city, $state, $zip, $loan_type, $amount, $rate, $term) {
         $db = get_db();
         
         $sql = "
@@ -99,20 +99,20 @@
 
         $stmt = $db->prepare($sql);
 
-        $stmt->bindValue(':account_number', $accountNumber, PDO::PARAM_INT);
-        $stmt->bindValue(':first_name', $firstName, PDO::PARAM_STR);
-        $stmt->bindValue(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindValue(':account_number', $account_number, PDO::PARAM_INT);
+        $stmt->bindValue(':first_name', $first_name, PDO::PARAM_STR);
+        $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
         $stmt->bindValue(':ssn', $ssn, PDO::PARAM_STR);
-        $stmt->bindValue(':gross_monthly_income', $grossMonthlyIncome, PDO::PARAM_INT);
+        $stmt->bindValue(':gross_monthly_income', $gross_monthly_income, PDO::PARAM_INT);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->bindValue(':phone', $phone, PDO::PARAM_STR);
-        $stmt->bindValue(':street_address', $streetAddress, PDO::PARAM_STR);
+        $stmt->bindValue(':street_address', $street_address, PDO::PARAM_STR);
         $stmt->bindValue(':city', $city, PDO::PARAM_STR);
         $stmt->bindValue(':state', $state, PDO::PARAM_STR);
         $stmt->bindValue(':zip', $zip, PDO::PARAM_STR);
-        $stmt->bindValue(':loan_type', $loanType, PDO::PARAM_INT);
+        $stmt->bindValue(':loan_type', $loan_type, PDO::PARAM_INT);
         $stmt->bindValue(':rate', $rate, PDO::PARAM_INT);
-        $stmt->bindValue(':amount', $loanAmount, PDO::PARAM_INT);
+        $stmt->bindValue(':amount', $amount, PDO::PARAM_INT);
         $stmt->bindValue(':term', $term, PDO::PARAM_INT);
 
         $stmt->execute();
