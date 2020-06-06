@@ -67,7 +67,7 @@
                                 <!-- <div class="input-group-prepend">
                                     <span class="input-group-text">$</span>
                                 </div> -->
-                                <input type="text" class="form-control only-numeric" id="amount" name="amount:number" placeholder="Loan Amount" maxlength="7" pattern="[0-9]" required>
+                                <input type="text" class="form-control only-numeric" id="amount" name="amount:number" placeholder="Loan Amount" maxlength="7" pattern="[0-9]">
                                 <label for="amount">Loan Amount</label>
                             </div>
                         </div>
@@ -81,13 +81,13 @@
                     <div class="form-row">
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
                                 <label for="first_name" class="control-label">First Name</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
                                 <label for="last_name" class="control-label">Last Name</label>
                             </div>
                         </div>
@@ -96,19 +96,19 @@
                     <div class="form-row">
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="text" class="form-control only-numeric" id="account_number" name="account_number:number" placeholder="Account Number" maxlength="7" pattern="\d{7}" required>
+                                <input type="text" class="form-control only-numeric" id="account_number" name="account_number:number" placeholder="Account Number" maxlength="7" pattern="\d{7}">
                                 <label for="account_number" class="control-label">Account Number</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="text" class="form-control" id="ssn" name="ssn" placeholder="SSN" maxlength="11" required>
+                                <input type="text" class="form-control" id="ssn" name="ssn" placeholder="SSN" maxlength="11">
                                 <label for="ssn" class="control-label">SSN</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-label-group">                                
-                                <input type="text" class="form-control only-numeric" id="gross_monthly_income" name="gross_monthly_income:number" placeholder="Gross Monthly Income" maxlength="7" pattern="[0-9]" required>
+                                <input type="text" class="form-control only-numeric" id="gross_monthly_income" name="gross_monthly_income:number" placeholder="Gross Monthly Income" maxlength="7" pattern="[0-9]">
                                 <label for="gross_monthly_income" class="control-label">Gross Monthly Income</label>
                             </div>
                         </div>
@@ -117,13 +117,13 @@
                     <div class="form-row">
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
                                 <label for="email" class="control-label">Email Address</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" maxlength="12" required>
+                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" maxlength="12">
                                 <label for="phone" class="control-label">Phone Number</label>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                         </div>
                         <div class="col">
                             <div class="form-label-group">
-                                <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code" maxlength="5" required>
+                                <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code" maxlength="5">
                                 <label for="zip" class="control-label">Zip Code</label>
                             </div>
                         </div>
