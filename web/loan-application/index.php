@@ -18,7 +18,7 @@
                 <div class="progress-bar active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div id="alert-message" class="alert alert-danger hide"></div>
-            <form id="loan-application" method="post">
+            <form id="loan-application" method="post" novalidate>
 
                 <fieldset>
                     <h2 class="mb-4">Step 1: Loan Details</h2>
