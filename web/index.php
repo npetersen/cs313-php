@@ -176,7 +176,7 @@
         <div class="wrap">
 
           <div class="fix-6-12">
-            <h1 class="ae-1">Assignments</h1>
+            <h1 class="ae-1">My Work</h1>
             <div class="ae-2">
               <!-- <p class="hero">Nothing to see here yet.</p> -->
             </div>
