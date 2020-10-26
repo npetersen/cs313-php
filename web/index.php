@@ -161,6 +161,7 @@
               <p class="hero">Hello, my name is Nate Petersen. <br> I'm a full-stack web developer, and I enjoy skiing and racing bicycles.</p>
             </div>
             <a href="#assignments" class="button orange ae-5">View My Work</a>
+            <a href="#contact" class="button orange ae-5">Get In Touch</a>
           </div>
           <div class="ae-10 fromRight">
             <?php echo date("l, M j, Y") ?>
