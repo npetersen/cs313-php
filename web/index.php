@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <title>Nate Petersen - CS 313</title>
+  <title>Nate Petersen - Portfolio</title>
 
   <!-- Fonts and Material Icons -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css" />
@@ -144,7 +144,8 @@
       <a href="#home" title="Nate Petersen" class="logo">Nate Petersen</a>
       <ul class="mainMenu uppercase">
         <li><a href="#home">Home</a></li>
-        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#assignments">My Work</a></li>
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
     </div>
   </nav>
@@ -157,9 +158,9 @@
           <div class="fix-10-12">
             <!-- <div class="h1 ae-1"></div> -->
             <div class="ae-2">
-              <p class="hero">Hello, my name is Nate Petersen. <br> I'm a CS 313 student, and I enjoy skiing and racing bicycles.</p>
+              <p class="hero">Hello, my name is Nate Petersen. <br> I'm a full-stack web developer, and I enjoy skiing and racing bicycles.</p>
             </div>
-            <a href="#assignments" class="button orange ae-5">See my assignments</a>
+            <a href="#assignments" class="button orange ae-5">View My Work</a>
           </div>
           <div class="ae-10 fromRight">
             <?php echo date("l, M j, Y") ?>
@@ -183,24 +184,69 @@
             <ul class="grid fixedSpaces later equal sourceSans grid-86">
               <li class="col-12-12 ae-2">
                 <div class="box-86 tint-86">
-                  <h3 class="small uppercase ae-4">Week 3 Prove Assignment</h3>
+                  <h3 class="small uppercase ae-4">Web Development Samples</h3>
                   <div class="ae-5"></div>
                   <div class="features-86 equalElement ae-6">
                     
                   </div>
-                  <a href="https://frozen-chamber-34011.herokuapp.com/03/shopping-cart/" class="button teal wide cropBottom ae-7">PHP Shopping Cart</a>
+                  <a href="https://frozen-chamber-34011.herokuapp.com/03/shopping-cart/" class="button teal wide cropBottom ae-7">PHP/AJAX Shopping Cart</a>
+                  <br />
+                  <br />
+                  <a href="https://frozen-chamber-34011.herokuapp.com/loan-application/" class="button teal wide cropBottom ae-8">PHP/PostgreSQL/REST Loan Application</a>
+                  <br />
+                  <br />
+                  <a href="https://noble-savage-cs313.herokuapp.com/" class="button teal wide cropBottom ae-9">NodeJS Personal Sprinkling System Overview</a>
+                  <br />
+                  <br />
+                  <a href="http://bebikesdev.utahwebdev.com/index.php" class="button teal wide cropBottom ae-10">Biker&apos;s Edge Web Site</a>
                 </div>
               </li>
-              <!-- <li class="col-6-12 ae-3">
-                <div class="box-86">
+              <!-- <li class="col-12-12 ae-3">
+                <div class="box-86 tint-86">
                   <h3 class="small uppercase ae-5">Assignment 2</h3>
                   <div class="ae-6"></div>
                   <div class="features-86 equalElement ae-7">
                     
                   </div>
-                  <a href="#" class="button pink wide cropBottom ae-8">See assignment 2</a>
+                  <a href="https://frozen-chamber-34011.herokuapp.com/loan-application/" class="button teal wide cropBottom ae-8">PHP/PostgreSQL/REST Loan Application</a>
                 </div>
               </li> -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="background" style="background-image:url(images/bg-assignments-2.jpg)"></div>
+  </section>
+
+  <section name="contact" class="slide fade kenBurns">
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+
+          <div class="fix-6-12">
+            <h1 class="ae-1">Get In Touch</h1>
+            <div class="ae-2">
+              <!-- <p class="hero">Nothing to see here yet.</p> -->
+            </div>
+            <ul class="grid fixedSpaces later equal sourceSans grid-86">
+              <li class="col-12-12 ae-2">
+                <div class="box-86 tint-86">
+                  <h3 class="small uppercase ae-4">Contact Information</h3>
+                  <div class="ae-5"></div>
+                  <div class="features-86 equalElement ae-6">
+                    
+                  </div>
+                  <a href="mailto:natepetersen@gmail.com?subject=Web%20Site%20Contact" class="button teal wide cropBottom ae-7">Send an email to Nate Petersen</a>
+                  <br />
+                  <br />
+                  <a href="tel:888-999-1011" class="button teal wide cropBottom ae-8">Call Nate Petersen</a>
+                  <br />
+                  <br />
+                  <a href="https://www.linkedin.com/in/nategpetersen" class="button teal wide cropBottom ae-9">Nate Petersen - LinkedIn</a>
+                </div>
+              </li>
             </ul>
           </div>
 
